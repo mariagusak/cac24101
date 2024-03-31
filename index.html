@@ -1,0 +1,78 @@
+<!--estructura-->
+<!DOCTYPE html>
+
+<html lang="en">
+    <!--ESTO ES UN COMENTARIO-->
+
+    <!-- ve el browser, pero no siempre el usuario -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <!-- ve el usuario -->
+    <body>
+        <!-- etiquetas semanticas -->
+        <!-- cabecera del doc -->
+        <header>
+            <h1>Mascotas</h1>
+            <h2> Sitio dedicado a mascotas</h2>
+        </header>
+
+        <!-- menu de navegacion -->
+        <nav>
+            <!-- single line responsability=
+            significa que cada linea tenga 1 responbilidad -->
+            <a href="#_perros"
+                >
+                    Perros
+            </a> |
+
+            <a href="./gatos.html"
+                target="_blank"
+                >
+                    Gatos
+            </a> |
+
+            <a href="./conejos.html"
+                target="_blank"
+                >
+                    Conejos
+            </a>
+        
+        </nav>
+
+        <!-- contenido ppal -->
+        <main>
+            <!-- el id me lleva a un link dentro de la misma
+            pagina, eso se nota cuando es mas grande la pag-->
+            <section id="_perros">
+                <h3>Perros</h3>
+                <!-- etiqueta de imagen -->
+                <!-- lo correcto es usar css para ACHICAR-->
+                <img src="https://i.blogs.es/1899c5/image-78-/1366_2000.png"
+                width="50%">
+            </section>
+
+
+            <section>
+                <h3>Gatos</h3>
+                <img src="./imgs/persa.jpg"
+                    alt="mi gato persa"
+                    width="25%"
+
+            </section>
+
+        </main>
+
+        <!-- pie de pagina -->
+        <footer>
+
+
+        </footer>
+        
+    </body>
+
+
+</html>

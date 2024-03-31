@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4- HTML -Formularios </title>
+</head>
+
+<body>
+    <header>
+        <h1>Formularios</h1>
+    </header>
+
+    <main>
+        <section>
+            <fieldset>
+                <legend>Datos personales</legend>
+                <!--los formularios para enviar informacion-->
+                <form action="./resultado.html">
+                    <!--action la url donde voy la info-->
+                    <!--inputs:varios tipos-->
+                    <div>
+                        <label for="nombre">Nombre:</label>
+                        <!--con el id, toco la palabra nombre y 
+                        se selecciona el cuadradito correspondiente-->
+                        <input maxlength="5" 
+                            id="nombre"
+                            placeholder="Agustina" 
+                            name="q"
+                            required
+                        >
+                        <!--placerholder me deja tenue una palabra
+                            es el valor alusivo-->
+                        <!--esto para palabras, no para numeros-->
+                    </div>
+                    <div>
+                        <label for="edad">Edad:</label>
+                        <input type="number" 
+                            min="0" 
+                            max="120" 
+                            name="edad"
+                            required>
+                        <label for="mes">Mes:</label>
+                        <input type="number" 
+                            min="1" 
+                            max="11"
+                            name="mes"
+                            required>
+                        <input type="range" 
+                            step="20" 
+                            value="100"
+                            name="rango">
+                    </div>
+                    <div>
+                        <label>Fecha Nacimiento</label>
+                        <!--el value sirve para precargar-->
+                        <input type="date" 
+                            value="2000-01-31"
+                            required>
+                    </div>
+                    <div>
+                        <label for="foto">Foto</label>
+                        <input type="file" name="foto">
+                    </div>
+                    <div>
+                        <label>Nacionalidad</label>
+                        <select name="nacionalidad" 
+                            id="nacionalidad"
+                            required>
+                            <option value=""selected>Seleccione</option>
+                            <option value="Argentina">Argentina</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Brasil">Brasil</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="phone">Enter your phone number:</label>
+                        <input type="tel" 
+                            id="phone" 
+                            name="phone"
+                            placeholder="Ej 011-12-456" 
+                            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    </div>
+                    <div>
+                        <label>T.C.</label>
+                        <span>SI</span>
+                        <!--span sirve para q este en linea-->
+                        <input type="checkbox"
+                            name="tc"
+                            value="si">
+                    </div>
+
+                    <div>
+                        <label>Turno</label>
+                        <div>
+                        <label>Mañana</label>
+                        <input type="radio" 
+                            name="turno"
+                            value="manana">
+                        <label>Tarde</label>
+                        <input type="radio" 
+                            name="turno"
+                            value="tarde">
+                        <label>Noche</label>  
+                        <input type="radio" 
+                            name="turno"
+                            value="noche">
+                            <!--si no le pongo value no se envia la informacion-->
+                        </div>                  
+                    </div>
+                    <div>
+                        <button>
+                            Enviar
+                        </button>
+                        <button type="reset">
+                            Limpiar
+                        </button>
+                    </div>
+                </form>
+            </fieldset>
+        </section>
+        <section>
+            <h3>Login</h3>
+            <!-- post= con esto no veo la info en la url -->
+            <form method="post">
+                <div>
+                    <label>Usuario</label>
+                    <input type="text" 
+                        name="usuario"
+                        required>
+                </div>        
+                <div>
+                    <label>Password</label>
+                    <input type="password" 
+                        name="password"
+                        required>
+                </div>
+                <button>
+                    Login
+                </button>
+            </form>
+        </section> 
+    </main>
+</body>
+
+</html>
